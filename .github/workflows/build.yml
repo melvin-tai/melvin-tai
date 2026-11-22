@@ -1,0 +1,47 @@
+name: Night shift
+
+on:
+  schedule:
+    - cron: "17 19 * * *"      # 19:17 UTC = 03:17 in Kuala Lumpur
+  workflow_dispatch:            # "Run workflow" button in the Actions tab
+  push:
+    branches: [main]
+    paths:
+      - profile.toml
+      - ascii.txt
+      - generate.py
+      - .github/workflows/build.yml
+
+permissions:
+  contents: write               # lets the job commit the redrawn card
+
+concurrency:
+  group: night-shift
+  cancel-in-progress: false
+
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Install font subsetter
+        run: python -m pip install --quiet -r requirements.txt
+
+      - name: Draw the card
+        env:
+          # Optional repo secret ACCESS_TOKEN (personal access token) adds
+          # private repos and contributions; without it, public data only.
+          GH_TOKEN: ${{ secrets.ACCESS_TOKEN || github.token }}
+        run: python generate.py
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add card.svg cache/
+          git diff --cached --quiet || { git commit -m "Night shift: redraw profile card"; git push; }

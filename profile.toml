@@ -1,0 +1,53 @@
+# ─────────────────────────────────────────────────────────────────────
+#  Melvin's night-shift profile card.
+#  Edit this file and push: the Action redraws card.svg.
+#  Test locally first with:  python preview.py
+# ─────────────────────────────────────────────────────────────────────
+
+username  = "melvin-tai"
+header    = "melvin@github"            # user@host, coloured like a shell prompt
+command   = "neofetch --night-shift"   # typed out when the card loads
+title_bar = "melvin@github: ~ — zsh"
+ascii_art = "ascii.txt"                # the owl; see tools/owl_builder.py (tools/owl-cute.txt is the old one)
+timezone  = "Asia/Kuala_Lumpur"        # for the "updated" stamp and the date
+line_width = 56
+
+# Rows are ["Key", "value"]. A dot in the key ("Vision.Optics") is drawn
+# like a property path. {github_age} = time since you joined GitHub; add
+# `birthday = 2004-01-31` near the top and use {age} for your own age.
+[[section]]
+rows = [
+  ["Status",    "online while you sleep"],
+  ["Uptime",    "{github_age}"],
+  ["Host",      "Monash University Malaysia"],
+  ["Kernel",    "CS (Data Science) Undergrad"],
+  ["Focus",     "Computer Vision, Deep Learning, ML"],
+  ["Stack",     "Python, JavaScript, Jupyter"],
+  ["Portfolio", "melvin-tai.github.io/Portfolio"],
+]
+
+[[section]]
+title = "Projects"
+rows = [
+  ["Vision.Optics",  "FoV Lens Projection Lab"],
+  ["Vision.Thermal", "AI Security Screening"],
+  ["Speech",         "Audio-Language Interpretation"],
+  ["Markets",        "Swing-Trading Trend Predictor"],
+  ["Ranking",        "Weighted Rating System"],
+  ["Cloud.Security", "Fraud Detection Pipeline"],
+]
+
+[night_shift]
+show = true
+night_hours = [22, 23, 0, 1, 2, 3, 4]   # what counts as "after dark"
+
+[stats]
+show = true
+lines_of_code = true
+
+[languages]
+show = false          # Languages section hidden; set to true to bring it back
+weight = "projects"   # "projects": each repo counts equally | "bytes": raw code size
+max = 5               # languages named in the legend; the rest become "Other"
+min_bytes = 1000      # ignore near-empty repos
+exclude = []          # e.g. ["HTML", "CSS"] to leave out markup

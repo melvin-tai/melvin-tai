@@ -1,0 +1,25 @@
+   {brow:.}                       {brow:.}
+   |{brow:\_}                   {brow:_/}|
+   |  {brow:\_}               {brow:_/}  |
+   |    {brow:\_}           {brow:_/}    |
+  /       {brow:\_}       {brow:_/}       \
+ /          {brow:\_}   {brow:_/}          \
+ |            {brow:\_/}            |
+ |     {disc:.---.}       {disc:.---.}     |
+ |    {disc:(}  {glare:@}  {disc:)}     {disc:(}  {glare:@}  {disc:)}    |
+ | {disc:\}   {disc:'---'}   {beak:v}   {disc:'---'}   {disc:/} |
+ |  {disc:'-.}                 {disc:.-'}  |
+ |     {disc:'--.._______..--'}     |
+ |  .    {dim:v}   {dim:v}   {dim:v}   {dim:v}    .  |
+/    \     {dim:v}   {dim:v}   {dim:v}     /    \
+| {dim:\}   \  {dim:v}   {dim:v}   {dim:v}   {dim:v}  /   {dim:/} |
+| {dim:\\}   |   {dim:v}   {dim:v}   {dim:v}   |   {dim://} |
+| {dim:\\\}  | {dim:v}   {dim:v}   {dim:v}   {dim:v} |  {dim:///} |
+|  {dim:\\\} |   {dim:v}   {dim:v}   {dim:v}   | {dim:///}  |
+\   {dim:\\} ) {dim:v}   {dim:v}   {dim:v}   {dim:v} ( {dim://}   /
+ \   {dim:\} /   {dim:v}   {dim:v}   {dim:v}   \ {dim:/}   /
+  '.  /      {dim:v}   {dim:v}      \  .'
+    '-.___{talon:/|\}_____{talon:/|\}___.-'
+{branch:━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━}
+                     {branch:'-._}
+                         {branch:'-.,}
