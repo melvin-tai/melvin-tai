@@ -503,7 +503,7 @@
    0,
    0,
    0,
-   0,
+   1,
    0,
    1,
    0,
@@ -524,7 +524,7 @@
    0,
    0
   ],
-  "sha": "4d7ebb750ccf1b2fd3cd2e4bd6012717157ca591"
+  "sha": "f3fe23c4216923e689ebc10adb9f854763f767a1"
  },
  "melvin-tai/theory-of-computation-dsa": {
   "add": 1,
